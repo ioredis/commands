@@ -2,11 +2,16 @@
   "name": "@ioredis/commands",
   "version": "0.2.0",
   "description": "Redis commands",
-  "main": "index.js",
+  "main": "built/index.js",
+  "files": [
+    "built/",
+    "commands.json"
+  ],
   "scripts": {
     "pretest": "npm run lint",
     "test": "mocha",
-    "build": "node tools/build",
+    "build": "tsc",
+    "gen": "node tools/build",
     "lint": "standard --fix --verbose | snazzy",
     "release": "release-it"
   },
@@ -41,7 +46,8 @@
     "safe-stable-stringify": "^2.3.1",
     "semantic-release": "^19.0.2",
     "snazzy": "^9.0.0",
-    "standard": "^16.0.4"
+    "standard": "^16.0.4",
+    "typescript": "^4.6.2"
   },
   "dependencies": {}
 }
