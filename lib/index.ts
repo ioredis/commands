@@ -1,4 +1,4 @@
-import commands from "../commands.json";
+import commands from "./commands.json";
 
 /**
  * Redis command list
@@ -63,7 +63,7 @@ export function getKeyIndexes(
   }
 
   const keys = [];
-  const parseExternalKey = options && options.parseExternalKey;
+  const parseExternalKey = Boolean(options && options.parseExternalKey);
 
   switch (commandName) {
     case "zunionstore":
@@ -80,13 +80,14 @@ export function getKeyIndexes(
     case "sort":
       keys.push(0);
       for (let i = 1; i < args.length - 1; i++) {
-        const arg = args[i];
+        let arg = args[i];
         if (typeof arg !== "string") {
           continue;
         }
         const directive = arg.toUpperCase();
         if (directive === "GET") {
           i += 1;
+          arg = args[i];
           if (arg !== "#") {
             if (parseExternalKey) {
               keys.push([i, getExternalKeyNameLength(arg)]);
@@ -97,7 +98,7 @@ export function getKeyIndexes(
         } else if (directive === "BY") {
           i += 1;
           if (parseExternalKey) {
-            keys.push([i, getExternalKeyNameLength(arg)]);
+            keys.push([i, getExternalKeyNameLength(args[i])]);
           } else {
             keys.push(i);
           }

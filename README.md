@@ -1,7 +1,5 @@
 # Redis Commands
 
-[![Build Status](https://github.com/ioredis/commands/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/ioredis/commands/actions/workflows/release.yml?query=branch%3Amain)
-
 This module exports all the commands that Redis supports.
 
 ## Install
@@ -19,7 +17,7 @@ const commands = require('@ioredis/commands');
 `.list` is an array contains all the lowercased commands:
 
 ```js
-commands.list.forEach(function (command) {
+commands.list.forEach((command) => {
   console.log(command);
 });
 ```

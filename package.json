@@ -10,7 +10,7 @@
   "scripts": {
     "pretest": "npm run lint",
     "test": "mocha",
-    "build": "tsc",
+    "build": "rm -rf built && tsc",
     "gen": "node tools/build",
     "lint": "standard --fix --verbose | snazzy",
     "release": "release-it"
