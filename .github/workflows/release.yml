@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+  release:
+    environment: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: "lts/*"
+      - run: npm ci
+      - run: git update-index --assume-unchanged .npmrc
+      - run: echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+      - name: setup git config
+        run: |
+          git config user.name "ioredis robot"
+          git config user.email "ioredis-robot@zihua.li"
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm run release -- --ci
