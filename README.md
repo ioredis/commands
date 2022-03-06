@@ -1,24 +1,24 @@
 # Redis Commands
 
-[![Build Status](https://github.com/ioredis/commands/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/ioredis/commands/actions/workflows/main.yml?query=branch%3Amain)
+[![Build Status](https://github.com/ioredis/commands/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/ioredis/commands/actions/workflows/release.yml?query=branch%3Amain)
 
 This module exports all the commands that Redis supports.
 
 ## Install
 
 ```shell
-$ npm install redis-commands
+$ npm install @ioredis/commands
 ```
 
 ## Usage
 
-```javascript
-var commands = require('redis-commands');
+```js
+const commands = require('@ioredis/commands');
 ```
 
 `.list` is an array contains all the lowercased commands:
 
-```javascript
+```js
 commands.list.forEach(function (command) {
   console.log(command);
 });
@@ -26,24 +26,20 @@ commands.list.forEach(function (command) {
 
 `.exists()` is used to check if the command exists:
 
-```javascript
+```js
 commands.exists('set') // true
 commands.exists('other-command') // false
 ```
 
 `.hasFlag()` is used to check if the command has the flag:
 
-```javascript
+```js
 commands.hasFlag('set', 'readonly') // false
 ```
 
 `.getKeyIndexes()` is used to get the indexes of keys in the command arguments:
 
-```javascript
+```js
 commands.getKeyIndexes('set', ['key', 'value']) // [0]
 commands.getKeyIndexes('mget', ['key1', 'key2']) // [0, 1]
 ```
-
-## Acknowledgment
-
-Thank [@Yuan Chuan](https://github.com/yuanchuan) for the package name. The original redis-commands is renamed to [@yuanchuan/redis-commands](https://www.npmjs.com/package/@yuanchuan/redis-commands).
