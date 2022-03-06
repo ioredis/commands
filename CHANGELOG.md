@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ioredis/commands/compare/v1.0.2...v1.1.0) (2022-03-06)
+
+
+### Features
+
+* support fcall and fcall_ro ([8c5cc88](https://github.com/ioredis/commands/commit/8c5cc886caf8d05cb96aac3abd9ce5174bb9d85e))
+
 ## [1.0.2](https://github.com/ioredis/commands/compare/v1.0.1...v1.0.2) (2022-03-06)
 
 
