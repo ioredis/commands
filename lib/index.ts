@@ -72,6 +72,10 @@ export function getKeyIndexes(
     // fall through
     case "eval":
     case "evalsha":
+    case "eval_ro":
+    case "evalsha_ro":
+    case "fcall":
+    case "fcall_ro":
       const keyStop = Number(args[1]) + 2;
       for (let i = 2; i < keyStop; i++) {
         keys.push(i);
