@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/ioredis/commands/compare/v1.0.1...v1.0.2) (2022-03-06)
+
+
+### Bug Fixes
+
+* key positions for sort command ([22ed6d2](https://github.com/ioredis/commands/commit/22ed6d2df52ef72970f64834b0e807d8088819f3))
+
 ## [1.0.1](https://github.com/ioredis/commands/compare/v1.0.0...v1.0.1) (2022-03-06)
 
 
