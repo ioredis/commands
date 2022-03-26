@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/ioredis/commands/compare/v1.1.0...v1.1.1) (2022-03-26)
+
+
+### Bug Fixes
+
+* upgrade ioredis to v5 ([58e2c55](https://github.com/ioredis/commands/commit/58e2c550467d0d8cf98a71837ee82983e5e72ff6))
+
 # [1.1.0](https://github.com/ioredis/commands/compare/v1.0.2...v1.1.0) (2022-03-06)
 
 
