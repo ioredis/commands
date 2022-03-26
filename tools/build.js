@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const stringify = require('safe-stable-stringify')
 const commandPath = path.join(__dirname, '..', 'commands.json')
-const redisCommands = require("..");
+const redisCommands = require('..')
 
 const Redis = require('ioredis')
 const redis = new Redis(process.env.REDIS_URI)
