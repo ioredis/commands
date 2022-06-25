@@ -86,6 +86,7 @@ describe('redis-commands', () => {
 
     it('should return key indexes', () => {
       expect(index('set', ['foo', 'bar'])).to.eql([0])
+      expect(index('zdiff', ['2', 'foo', 'bar'])).to.eql([1, 2])
       expect(index('del', ['foo'])).to.eql([0])
       expect(index('get', ['foo'])).to.eql([0])
       expect(index('mget', ['foo', 'bar'])).to.eql([0, 1])
@@ -108,98 +109,281 @@ describe('redis-commands', () => {
           '3'
         ])
       ).to.eql([0, 2, 3])
-      expect(index('migrate', ['127.0.0.1', 6379, 'foo', 0, 0, 'COPY'])).to.eql(
-        [2]
-      )
-      expect(
-        index('migrate', [
-          '127.0.0.1',
-          6379,
-          '',
-          0,
-          0,
-          'REPLACE',
-          'KEYS',
-          'foo',
-          'bar'
+    })
+
+    describe('moveable commands', () => {
+      it('handles zunionstore', () => {
+        expect(
+          index('zunionstore', [
+            'out',
+            '2',
+            'zset1',
+            'zset2',
+            'WEIGHTS',
+            '2',
+            '3'
+          ])
+        ).to.eql([0, 2, 3])
+      })
+
+      it('handles zinterstore', () => {
+        expect(
+          index('zinterstore', [
+            'out',
+            '2',
+            'zset1',
+            'zset2',
+            'WEIGHTS',
+            '2',
+            '3'
+          ])
+        ).to.eql([0, 2, 3])
+      })
+
+      it('handles zdiffstore', () => {
+        expect(index('zdiffstore', ['out', '2', 'zset1', 'zset2'])).to.eql([
+          0, 2, 3
         ])
-      ).to.eql([7, 8])
-      expect(
-        index('migrate', ['127.0.0.1', 6379, '', 0, 0, 'KEYS', 'foo', 'bar'])
-      ).to.eql([6, 7])
-      expect(
-        index('xreadgroup', [
-          'GROUP',
-          'group',
-          'consumer',
-          'COUNT',
-          10,
-          'BLOCK',
-          2000,
-          'NOACK',
-          'STREAMS',
-          'key1',
-          'key2',
-          'id1',
-          'id2'
+      })
+
+      it('handles eval', () => {
+        expect(index('eval', ['script', '0', 'foo'])).to.eql([])
+        expect(index('eval_ro', ['script', '0'])).to.eql([])
+        expect(index('eval', ['script', '3', 'foo', 'bar', 'zoo'])).to.eql([
+          2, 3, 4
         ])
-      ).to.eql([9, 10])
-      expect(
-        index('xreadgroup', [
-          'GROUP',
-          'group',
-          'consumer',
-          'STREAMS',
-          'key1',
-          'id1'
+        expect(index('eval', ['script', '2', 'foo', 'bar', 'zoo'])).to.eql([
+          2, 3
         ])
-      ).to.eql([4])
-      expect(
-        index('xreadgroup', [
-          'GROUP',
-          'group',
-          'consumer',
-          'STREAMS',
-          'key1',
-          'key2',
-          'id1',
-          'id2'
+        expect(index('evalsha', ['script', '3', 'foo', 'bar', 'zoo'])).to.eql([
+          2, 3, 4
         ])
-      ).to.eql([4, 5])
-      expect(
-        index('xreadgroup', [
-          'GROUP',
-          'group',
-          'consumer',
-          'STREAMS',
-          'key1',
-          'key2',
-          'key3',
-          'id1',
-          'id2',
-          'id3'
+        expect(index('evalsha_ro', ['script', 1, 'foo', 'bar'])).to.eql([2])
+      })
+
+      it('handles fcall', () => {
+        expect(index('fcall', ['function', '0', 'foo'])).to.eql([])
+        expect(index('fcall_ro', ['function', '0'])).to.eql([])
+        expect(index('fcall', ['function', '3', 'foo', 'bar', 'zoo'])).to.eql([
+          2, 3, 4
         ])
-      ).to.eql([4, 5, 6])
-      expect(
-        index('xread', [
-          'COUNT',
-          10,
-          'BLOCK',
-          2000,
-          'STREAMS',
-          'key1',
-          'key2',
-          'id1',
-          'id2'
+        expect(index('fcall', ['function', '2', 'foo', 'bar', 'zoo'])).to.eql([
+          2, 3
         ])
-      ).to.eql([5, 6])
-      expect(index('xread', ['STREAMS', 'key1', 'id1'])).to.eql([1])
-      expect(index('xread', ['STREAMS', 'key1', 'key2', 'id1', 'id2'])).to.eql([
-        1, 2
-      ])
-      expect(
-        index('xread', ['STREAMS', 'key1', 'key2', 'key3', 'id1', 'id2', 'id3'])
-      ).to.eql([1, 2, 3])
+      })
+
+      it('handles blmpop', () => {
+        expect(index('blmpop', ['0', '1', 'foo', 'left'])).to.eql([2])
+        expect(
+          index('blmpop', ['0', '2', 'foo', 'bar', 'right', 'count', 10])
+        ).to.eql([2, 3])
+      })
+
+      it('handles bzmpop', () => {
+        expect(index('bzmpop', ['0', '1', 'foo', 'min'])).to.eql([2])
+        expect(
+          index('bzmpop', ['0', '2', 'foo', 'bar', 'max', 'count', 10])
+        ).to.eql([2, 3])
+      })
+
+      it('handles sintercard & zintercard', () => {
+        expect(index('sintercard', ['2', 'key1', 'key2', 'limit', '1'])).to.eql(
+          [1, 2]
+        )
+        expect(index('sintercard', ['2', 'key1', 'key2'])).to.eql([1, 2])
+        expect(index('zintercard', ['2', 'key1', 'key2'])).to.eql([1, 2])
+      })
+
+      it('handles lmpop', () => {
+        expect(
+          index('lmpop', ['2', 'key1', 'key2', 'left', 'count', 10])
+        ).to.eql([1, 2])
+      })
+
+      it('handles zunion & zinter', () => {
+        expect(index('zunion', ['2', 'key1', 'key2', 'WITHSCORES'])).to.eql([
+          1, 2
+        ])
+        expect(index('zinter', ['2', 'key1', 'key2', 'WITHSCORES'])).to.eql([
+          1, 2
+        ])
+      })
+
+      it('handles zmpop', () => {
+        expect(
+          index('zmpop', ['2', 'key1', 'key2', 'MAX', 'COUNT', '10'])
+        ).to.eql([1, 2])
+      })
+
+      it('handles zdiff', () => {
+        expect(index('zdiff', ['2', 'key1', 'key2', 'WITHSCORES'])).to.eql([
+          1, 2
+        ])
+      })
+
+      it('handles georadius', () => {
+        expect(
+          index('georadius', [
+            'Sicily',
+            15,
+            37,
+            200,
+            'km',
+            'WITHDIST',
+            'STORE',
+            'store'
+          ])
+        ).to.eql([0, 7])
+
+        expect(
+          index('georadius', [
+            'Sicily',
+            15,
+            37,
+            200,
+            'km',
+            'WITHDIST',
+            'STORE',
+            'store1',
+            'STOREDIST',
+            'store2'
+          ])
+        ).to.eql([0, 7, 9])
+
+        expect(
+          index('georadius', ['Sicily', 15, 37, 200, 'km', 'WITHDIST'])
+        ).to.eql([0])
+
+        expect(
+          index('georadius_ro', ['Sicily', 15, 37, 200, 'km', 'WITHDIST'])
+        ).to.eql([0])
+      })
+
+      it('handles georadiusbymember', () => {
+        expect(
+          index('georadiusbymember', [
+            'Sicily',
+            'ag',
+            200,
+            'km',
+            'STORE',
+            'store'
+          ])
+        ).to.eql([0, 5])
+
+        expect(
+          index('georadiusbymember_ro', ['Sicily', 'ag', 200, 'km'])
+        ).to.eql([0])
+      })
+
+      it('handles migrate', () => {
+        expect(
+          index('migrate', ['127.0.0.1', 6379, 'foo', 0, 0, 'COPY'])
+        ).to.eql([2])
+        expect(
+          index('migrate', [
+            '127.0.0.1',
+            6379,
+            '',
+            0,
+            0,
+            'REPLACE',
+            'KEYS',
+            'foo',
+            'bar'
+          ])
+        ).to.eql([7, 8])
+        expect(
+          index('migrate', ['127.0.0.1', 6379, '', 0, 0, 'KEYS', 'foo', 'bar'])
+        ).to.eql([6, 7])
+      })
+
+      it('handles xreadgroup', () => {
+        expect(
+          index('xreadgroup', [
+            'GROUP',
+            'group',
+            'consumer',
+            'COUNT',
+            10,
+            'BLOCK',
+            2000,
+            'NOACK',
+            'STREAMS',
+            'key1',
+            'key2',
+            'id1',
+            'id2'
+          ])
+        ).to.eql([9, 10])
+        expect(
+          index('xreadgroup', [
+            'GROUP',
+            'group',
+            'consumer',
+            'STREAMS',
+            'key1',
+            'id1'
+          ])
+        ).to.eql([4])
+        expect(
+          index('xreadgroup', [
+            'GROUP',
+            'group',
+            'consumer',
+            'STREAMS',
+            'key1',
+            'key2',
+            'id1',
+            'id2'
+          ])
+        ).to.eql([4, 5])
+        expect(
+          index('xreadgroup', [
+            'GROUP',
+            'group',
+            'consumer',
+            'STREAMS',
+            'key1',
+            'key2',
+            'key3',
+            'id1',
+            'id2',
+            'id3'
+          ])
+        ).to.eql([4, 5, 6])
+      })
+
+      it('handles xread', () => {
+        expect(
+          index('xread', [
+            'COUNT',
+            10,
+            'BLOCK',
+            2000,
+            'STREAMS',
+            'key1',
+            'key2',
+            'id1',
+            'id2'
+          ])
+        ).to.eql([5, 6])
+        expect(index('xread', ['STREAMS', 'key1', 'id1'])).to.eql([1])
+        expect(
+          index('xread', ['STREAMS', 'key1', 'key2', 'id1', 'id2'])
+        ).to.eql([1, 2])
+        expect(
+          index('xread', [
+            'STREAMS',
+            'key1',
+            'key2',
+            'key3',
+            'id1',
+            'id2',
+            'id3'
+          ])
+        ).to.eql([1, 2, 3])
+      })
     })
 
     it('should support numeric argument', () => {
