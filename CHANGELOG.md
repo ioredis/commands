@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/ioredis/commands/compare/v1.1.1...v1.2.0) (2022-06-25)
+
+
+### Features
+
+* update commands to Redis 7.0.2 ([92f0539](https://github.com/ioredis/commands/commit/92f05392d99e3d5ac785cd66881f85416cc08041))
+
 ## [1.1.1](https://github.com/ioredis/commands/compare/v1.1.0...v1.1.1) (2022-03-26)
 
 
