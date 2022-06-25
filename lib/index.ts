@@ -65,23 +65,72 @@ export function getKeyIndexes(
   const keys = [];
   const parseExternalKey = Boolean(options && options.parseExternalKey);
 
+  const takeDynamicKeys = (args: unknown[], startIndex: number) => {
+    const keys: number[] = [];
+    const keyStop = Number(args[startIndex]);
+    for (let i = 0; i < keyStop; i++) {
+      keys.push(i + startIndex + 1);
+    }
+    return keys;
+  };
+
+  const takeKeyAfterToken = (
+    args: unknown[],
+    startIndex: number,
+    token: string
+  ) => {
+    for (let i = startIndex; i < args.length - 1; i += 1) {
+      if (String(args[i]).toLowerCase() === token.toLowerCase()) {
+        return i + 1;
+      }
+    }
+    return null;
+  };
+
   switch (commandName) {
     case "zunionstore":
     case "zinterstore":
-      keys.push(0);
-    // fall through
+    case "zdiffstore":
+      keys.push(0, ...takeDynamicKeys(args, 1));
+      break;
     case "eval":
     case "evalsha":
     case "eval_ro":
     case "evalsha_ro":
     case "fcall":
     case "fcall_ro":
-      const keyStop = Number(args[1]) + 2;
-      for (let i = 2; i < keyStop; i++) {
-        keys.push(i);
-      }
+    case "blmpop":
+    case "bzmpop":
+      keys.push(...takeDynamicKeys(args, 1));
       break;
+    case "sintercard":
+    case "lmpop":
+    case "zunion":
+    case "zinter":
+    case "zmpop":
+    case "zintercard":
+    case "zdiff": {
+      keys.push(...takeDynamicKeys(args, 0));
+      break;
+    }
+    case "georadius": {
+      keys.push(0);
+      const storeKey = takeKeyAfterToken(args, 5, "STORE");
+      if (storeKey) keys.push(storeKey);
+      const distKey = takeKeyAfterToken(args, 5, "STOREDIST");
+      if (distKey) keys.push(distKey);
+      break;
+    }
+    case "georadiusbymember": {
+      keys.push(0);
+      const storeKey = takeKeyAfterToken(args, 4, "STORE");
+      if (storeKey) keys.push(storeKey);
+      const distKey = takeKeyAfterToken(args, 4, "STOREDIST");
+      if (distKey) keys.push(distKey);
+      break;
+    }
     case "sort":
+    case "sort_ro":
       keys.push(0);
       for (let i = 1; i < args.length - 1; i++) {
         let arg = args[i];

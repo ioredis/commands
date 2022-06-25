@@ -75,8 +75,7 @@
     "arity": -2,
     "flags": [
       "write",
-      "denyoom",
-      "movablekeys"
+      "denyoom"
     ],
     "keyStart": 1,
     "keyStop": 1,
@@ -334,7 +333,6 @@
       "noscript",
       "stale",
       "skip_monitor",
-      "may_replicate",
       "no_mandatory_keys",
       "movablekeys"
     ],
@@ -345,6 +343,7 @@
   "eval_ro": {
     "arity": -3,
     "flags": [
+      "readonly",
       "noscript",
       "stale",
       "skip_monitor",
@@ -361,7 +360,6 @@
       "noscript",
       "stale",
       "skip_monitor",
-      "may_replicate",
       "no_mandatory_keys",
       "movablekeys"
     ],
@@ -372,6 +370,7 @@
   "evalsha_ro": {
     "arity": -3,
     "flags": [
+      "readonly",
       "noscript",
       "stale",
       "skip_monitor",
@@ -451,7 +450,6 @@
       "noscript",
       "stale",
       "skip_monitor",
-      "may_replicate",
       "no_mandatory_keys",
       "movablekeys"
     ],
@@ -462,6 +460,7 @@
   "fcall_ro": {
     "arity": -3,
     "flags": [
+      "readonly",
       "noscript",
       "stale",
       "skip_monitor",
@@ -1193,15 +1192,14 @@
   "pfcount": {
     "arity": -2,
     "flags": [
-      "readonly",
-      "may_replicate"
+      "readonly"
     ],
     "keyStart": 1,
     "keyStop": -1,
     "step": 1
   },
   "pfdebug": {
-    "arity": -3,
+    "arity": 3,
     "flags": [
       "write",
       "denyoom",
@@ -1289,8 +1287,7 @@
       "pubsub",
       "loading",
       "stale",
-      "fast",
-      "may_replicate"
+      "fast"
     ],
     "keyStart": 0,
     "keyStop": 0,
@@ -1576,8 +1573,7 @@
     "arity": -3,
     "flags": [
       "write",
-      "denyoom",
-      "movablekeys"
+      "denyoom"
     ],
     "keyStart": 1,
     "keyStop": 1,
@@ -1762,8 +1758,7 @@
       "pubsub",
       "loading",
       "stale",
-      "fast",
-      "may_replicate"
+      "fast"
     ],
     "keyStart": 1,
     "keyStop": 1,
