@@ -687,7 +687,7 @@
     "step": 1
   },
   "hexpire": {
-    "arity": -4,
+    "arity": -5,
     "flags": [
       "write",
       "fast",
