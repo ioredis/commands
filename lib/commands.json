@@ -686,6 +686,17 @@
     "keyStop": 1,
     "step": 1
   },
+  "hexpire": {
+    "arity": -4,
+    "flags": [
+      "write",
+      "fast",
+      "denyoom"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "hget": {
     "arity": 3,
     "flags": [
