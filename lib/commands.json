@@ -687,14 +687,13 @@
     "step": 1
   },
   "hexpire": {
-    "arity": -7,
+    "arity": -6,
     "flags": [
       "write",
-      "fast",
-      "denyoom"
+      "fast"
     ],
     "keyStart": 1,
-    "keyStop": -1,
+    "keyStop": 1,
     "step": 1
   },
   "hget": {
