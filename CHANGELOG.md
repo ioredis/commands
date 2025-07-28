@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/ioredis/commands/compare/v1.2.0...v1.3.0) (2025-07-28)
+
+
+### Features
+
+* release hexpire command ([#4](https://github.com/ioredis/commands/issues/4)) ([ac1faec](https://github.com/ioredis/commands/commit/ac1faecacd9704412d391ce53d072e9f67ae47bd))
+
 # [1.2.0](https://github.com/ioredis/commands/compare/v1.1.1...v1.2.0) (2022-06-25)
 
 
