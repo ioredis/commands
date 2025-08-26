@@ -2047,6 +2047,16 @@
     "keyStop": 1,
     "step": 1
   },
+  "xdelex": {
+    "arity": -5,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "xgroup": {
     "arity": -2,
     "flags": [],
