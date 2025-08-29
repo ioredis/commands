@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/ioredis/commands/compare/v1.3.0...v1.3.1) (2025-08-29)
+
+
+### Bug Fixes
+
+* regenerate hpexpire with npm run gen ([#6](https://github.com/ioredis/commands/issues/6)) ([917b568](https://github.com/ioredis/commands/commit/917b5681b383c3040565caa250f9fc779a8a42cd))
+
 # [1.3.0](https://github.com/ioredis/commands/compare/v1.2.0...v1.3.0) (2025-07-28)
 
 
