@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/ioredis/commands/compare/v1.3.1...v1.4.0) (2025-09-15)
+
+
+### Features
+
+* **stream:** Add XDELEX command ([#5](https://github.com/ioredis/commands/issues/5)) ([28215cd](https://github.com/ioredis/commands/commit/28215cd93fb4f33a6711dabdfd8805ddf843e15c))
+
 ## [1.3.1](https://github.com/ioredis/commands/compare/v1.3.0...v1.3.1) (2025-08-29)
 
 
