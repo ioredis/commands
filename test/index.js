@@ -42,6 +42,12 @@ describe('redis-commands', () => {
       expect(commands.exists('set get')).to.eql(false)
       expect(commands.exists('other-command')).to.eql(false)
     })
+
+    it('supports case-insensitive lookups when enabled', () => {
+      expect(commands.exists('SET', { caseInsensitive: true })).to.eql(true)
+      expect(commands.exists('SeT', { caseInsensitive: true })).to.eql(true)
+      expect(commands.exists('SET')).to.eql(false)
+    })
   })
 
   describe('.hasFlag()', () => {
@@ -62,6 +68,12 @@ describe('redis-commands', () => {
       expect(() => {
         commands.hasFlag('UNKNOWN')
       }).to.throw(Error)
+    })
+
+    it('supports case-insensitive command name when enabled', () => {
+      expect(commands.hasFlag('SET', 'write', { nameCaseInsensitive: true })).to.eql(true)
+      expect(commands.hasFlag('SeLeCt', 'fast', { nameCaseInsensitive: true })).to.eql(true)
+      expect(commands.hasFlag('SeT', 'readonly', { nameCaseInsensitive: true })).to.eql(false)
     })
   })
 
@@ -109,6 +121,15 @@ describe('redis-commands', () => {
           '3'
         ])
       ).to.eql([0, 2, 3])
+    })
+
+    it('supports case-insensitive command name when enabled', () => {
+      // default behavior: unknown uppercased command should throw
+      expect(() => index('GET', ['foo'])).to.throw(Error)
+      // with nameCaseInsensitive, it should work
+      expect(index('GET', ['foo'], { nameCaseInsensitive: true })).to.eql([0])
+      // also test a command handled in the switch branches
+      expect(index('EVAL', ['script', '2', 'k1', 'k2'], { nameCaseInsensitive: true })).to.eql([2, 3])
     })
 
     describe('moveable commands', () => {
