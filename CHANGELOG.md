@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/ioredis/commands/compare/v1.4.0...v1.5.0) (2025-11-03)
+
+
+### Features
+
+* caseInsensitive option for each function ([#7](https://github.com/ioredis/commands/issues/7)) ([4f89cfe](https://github.com/ioredis/commands/commit/4f89cfe1ddf6a01fc719ce20aa6f3f467fe3e9af))
+
 # [1.4.0](https://github.com/ioredis/commands/compare/v1.3.1...v1.4.0) (2025-09-15)
 
 
