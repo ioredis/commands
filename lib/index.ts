@@ -22,7 +22,14 @@ list.forEach((commandName) => {
 /**
  * Check if the command exists
  */
-export function exists(commandName: string): boolean {
+export function exists(
+  commandName: string,
+  options?: { caseInsensitive?: boolean }
+): boolean {
+  commandName = options?.caseInsensitive
+    ? String(commandName).toLowerCase()
+    : commandName;
+
   return Boolean(commands[commandName]);
 }
 
@@ -31,7 +38,15 @@ export function exists(commandName: string): boolean {
  *
  * Some of possible flags: readonly, noscript, loading
  */
-export function hasFlag(commandName: string, flag: string): boolean {
+export function hasFlag(
+  commandName: string,
+  flag: string,
+  options?: { nameCaseInsensitive?: boolean }
+): boolean {
+  commandName = options?.nameCaseInsensitive
+    ? String(commandName).toLowerCase()
+    : commandName;
+
   if (!flags[commandName]) {
     throw new Error("Unknown command " + commandName);
   }
@@ -51,8 +66,12 @@ export function hasFlag(commandName: string, flag: string): boolean {
 export function getKeyIndexes(
   commandName: string,
   args: (string | Buffer | number)[],
-  options?: { parseExternalKey: boolean }
+  options?: { parseExternalKey?: boolean; nameCaseInsensitive?: boolean }
 ): number[] {
+  commandName = options?.nameCaseInsensitive
+    ? String(commandName).toLowerCase()
+    : commandName;
+
   const command = commands[commandName];
   if (!command) {
     throw new Error("Unknown command " + commandName);
