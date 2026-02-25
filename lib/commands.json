@@ -696,10 +696,20 @@
     "keyStop": 1,
     "step": 1
   },
-  "hpexpire": {
+  "hexpireat": {
     "arity": -6,
     "flags": [
       "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "hexpiretime": {
+    "arity": -5,
+    "flags": [
+      "readonly",
       "fast"
     ],
     "keyStart": 1,
@@ -720,6 +730,26 @@
     "arity": 2,
     "flags": [
       "readonly"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "hgetdel": {
+    "arity": -5,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "hgetex": {
+    "arity": -5,
+    "flags": [
+      "write",
+      "fast"
     ],
     "keyStart": 1,
     "keyStop": 1,
@@ -787,6 +817,56 @@
     "keyStop": 1,
     "step": 1
   },
+  "hpersist": {
+    "arity": -5,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "hpexpire": {
+    "arity": -6,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "hpexpireat": {
+    "arity": -6,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "hpexpiretime": {
+    "arity": -5,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "hpttl": {
+    "arity": -5,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "hrandfield": {
     "arity": -2,
     "flags": [
@@ -816,6 +896,17 @@
     "keyStop": 1,
     "step": 1
   },
+  "hsetex": {
+    "arity": -6,
+    "flags": [
+      "write",
+      "denyoom",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "hsetnx": {
     "arity": 4,
     "flags": [
@@ -829,6 +920,16 @@
   },
   "hstrlen": {
     "arity": 3,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "httl": {
+    "arity": -5,
     "flags": [
       "readonly",
       "fast"
