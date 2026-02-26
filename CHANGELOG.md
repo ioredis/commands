@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/ioredis/commands/compare/v1.5.0...v1.5.1) (2026-02-26)
+
+
+### Bug Fixes
+
+* **commands:** add remaining hash commands metadata ([#8](https://github.com/ioredis/commands/issues/8)) ([e4f8ceb](https://github.com/ioredis/commands/commit/e4f8ceb5caacea844e80efa576eec127cf254743))
+
 # [1.5.0](https://github.com/ioredis/commands/compare/v1.4.0...v1.5.0) (2025-11-03)
 
 
