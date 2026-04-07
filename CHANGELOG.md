@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/ioredis/commands/compare/v1.5.1...v1.6.0) (2026-04-07)
+
+
+### Features
+
+* add gcra command ([#10](https://github.com/ioredis/commands/issues/10)) ([0e441ae](https://github.com/ioredis/commands/commit/0e441aebf68c2306d5b0bc8c00145e6d088bf1b8))
+
 ## [1.5.1](https://github.com/ioredis/commands/compare/v1.5.0...v1.5.1) (2026-02-26)
 
 
