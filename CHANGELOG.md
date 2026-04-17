@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/ioredis/commands/compare/v1.6.0...v1.7.0) (2026-04-17)
+
+
+### Features
+
+* add xnack command metadata ([#11](https://github.com/ioredis/commands/issues/11)) ([659455d](https://github.com/ioredis/commands/commit/659455d5a7e48700295eef2b081917f5e00595ec))
+
 # [1.6.0](https://github.com/ioredis/commands/compare/v1.5.1...v1.6.0) (2026-04-07)
 
 
