@@ -132,6 +132,13 @@ export function getKeyIndexes(
       keys.push(...takeDynamicKeys(args, 0));
       break;
     }
+    case "msetex": {
+      const numKeys = Number(args[0]);
+      for (let i = 0; i < numKeys; i++) {
+        keys.push(1 + i * 2);
+      }
+      break;
+    }
     case "georadius": {
       keys.push(0);
       const storeKey = takeKeyAfterToken(args, 5, "STORE");

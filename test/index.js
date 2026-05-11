@@ -236,6 +236,19 @@ describe('redis-commands', () => {
         ).to.eql([1, 2])
       })
 
+      it('handles msetex', () => {
+        expect(index('msetex', ['1', 'k1', 'v1'])).to.eql([1])
+        expect(
+          index('msetex', ['2', 'k1', 'v1', 'k2', 'v2'])
+        ).to.eql([1, 3])
+        expect(
+          index('msetex', ['2', 'k1', 'v1', 'k2', 'v2', 'NX', 'EX', '60'])
+        ).to.eql([1, 3])
+        expect(
+          index('msetex', ['3', 'k1', 'v1', 'k2', 'v2', 'k3', 'v3', 'NX', 'EX', '60'])
+        ).to.eql([1, 3, 5])
+      })
+
       it('handles zdiff', () => {
         expect(index('zdiff', ['2', 'key1', 'key2', 'WITHSCORES'])).to.eql([
           1, 2
