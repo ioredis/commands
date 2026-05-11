@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/ioredis/commands/compare/v1.7.0...v1.8.0) (2026-05-11)
+
+
+### Features
+
+* add msetex command support ([#12](https://github.com/ioredis/commands/issues/12)) ([8fa79f1](https://github.com/ioredis/commands/commit/8fa79f1baf7029ed0a42f30677a0289fc615b68e))
+
 # [1.7.0](https://github.com/ioredis/commands/compare/v1.6.0...v1.7.0) (2026-04-17)
 
 
