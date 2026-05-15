@@ -17,6 +17,182 @@
     "keyStop": 1,
     "step": 1
   },
+   "arcount": {
+    "arity": 2,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "ardel": {
+    "arity": -3,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "ardelrange": {
+    "arity": -4,
+    "flags": [
+      "write"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "arget": {
+    "arity": 3,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "argetrange": {
+    "arity": 4,
+    "flags": [
+      "readonly"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "argrep": {
+    "arity": -6,
+    "flags": [
+      "readonly"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "arinfo": {
+    "arity": -2,
+    "flags": [
+      "readonly"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "arinsert": {
+    "arity": -3,
+    "flags": [
+      "write",
+      "denyoom",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "arlastitems": {
+    "arity": -3,
+    "flags": [
+      "readonly"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "arlen": {
+    "arity": 2,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "armget": {
+    "arity": -3,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "armset": {
+    "arity": -4,
+    "flags": [
+      "write",
+      "denyoom",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "arnext": {
+    "arity": 2,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "arop": {
+    "arity": -5,
+    "flags": [
+      "readonly"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "arring": {
+    "arity": -4,
+    "flags": [
+      "write",
+      "denyoom"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "arscan": {
+    "arity": -4,
+    "flags": [
+      "readonly"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "arseek": {
+    "arity": 3,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "arset": {
+    "arity": -4,
+    "flags": [
+      "write",
+      "denyoom",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "asking": {
     "arity": 1,
     "flags": [
