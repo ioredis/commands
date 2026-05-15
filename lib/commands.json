@@ -991,6 +991,17 @@
     "keyStop": 1,
     "step": 1
   },
+  "increx": {
+    "arity": -2,
+    "flags": [
+      "write",
+      "denyoom",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "info": {
     "arity": -1,
     "flags": [
