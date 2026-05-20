@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/ioredis/commands/compare/v1.8.0...v1.9.0) (2026-05-20)
+
+
+### Features
+
+* Add increx and array commands ([#14](https://github.com/ioredis/commands/issues/14)) ([9460906](https://github.com/ioredis/commands/commit/9460906bd4f48f06009074e9aba297d0932076fb))
+
 # [1.8.0](https://github.com/ioredis/commands/compare/v1.7.0...v1.8.0) (2026-05-11)
 
 
