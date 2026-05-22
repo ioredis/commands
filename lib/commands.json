@@ -1,4 +1,142 @@
 {
+  "vadd": {
+    "arity": -5,
+    "flags": [
+      "write",
+      "denyoom",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vcard": {
+    "arity": 2,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vdim": {
+    "arity": 2,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vemb": {
+    "arity": -3,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vgetattr": {
+    "arity": 3,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vinfo": {
+    "arity": 2,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vismember": {
+    "arity": 3,
+    "flags": [
+      "readonly",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vlinks": {
+    "arity": -3,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vrandmember": {
+    "arity": -2,
+    "flags": [
+      "readonly",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vrange": {
+    "arity": -4,
+    "flags": [
+      "readonly",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vrem": {
+    "arity": 3,
+    "flags": [
+      "write",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vsetattr": {
+    "arity": 4,
+    "flags": [
+      "write",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vsim": {
+    "arity": -4,
+    "flags": [
+      "readonly",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "acl": {
     "arity": -2,
     "flags": [],
