@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/ioredis/commands/compare/v1.9.0...v1.10.0) (2026-05-22)
+
+
+### Features
+
+* add vector set commands ([#16](https://github.com/ioredis/commands/issues/16)) ([1cb069c](https://github.com/ioredis/commands/commit/1cb069c32e3b706cf730433b7660a1a3c213a124))
+
 # [1.9.0](https://github.com/ioredis/commands/compare/v1.8.0...v1.9.0) (2026-05-20)
 
 
