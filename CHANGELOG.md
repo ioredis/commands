@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/ioredis/commands/compare/v1.10.0...v1.11.0) (2026-07-15)
+
+
+### Features
+
+* add SDIFFCARD and SUNIONCARD support ([#17](https://github.com/ioredis/commands/issues/17)) ([d2a5b11](https://github.com/ioredis/commands/commit/d2a5b11c8bc442e7cf0c3b6b7a849dc0e59cc718))
+
 # [1.10.0](https://github.com/ioredis/commands/compare/v1.9.0...v1.10.0) (2026-05-22)
 
 
