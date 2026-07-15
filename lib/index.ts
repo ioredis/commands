@@ -122,7 +122,9 @@ export function getKeyIndexes(
     case "bzmpop":
       keys.push(...takeDynamicKeys(args, 1));
       break;
+    case "sdiffcard":
     case "sintercard":
+    case "sunioncard":
     case "lmpop":
     case "zunion":
     case "zinter":

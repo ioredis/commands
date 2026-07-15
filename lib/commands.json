@@ -2005,6 +2005,16 @@
     "keyStop": -1,
     "step": 1
   },
+  "sdiffcard": {
+    "arity": -3,
+    "flags": [
+      "readonly",
+      "movablekeys"
+    ],
+    "keyStart": 0,
+    "keyStop": 0,
+    "step": 0
+  },
   "sdiffstore": {
     "arity": -3,
     "flags": [
@@ -2300,6 +2310,16 @@
     "keyStart": 1,
     "keyStop": -1,
     "step": 1
+  },
+  "sunioncard": {
+    "arity": -3,
+    "flags": [
+      "readonly",
+      "movablekeys"
+    ],
+    "keyStart": 0,
+    "keyStop": 0,
+    "step": 0
   },
   "sunionstore": {
     "arity": -3,

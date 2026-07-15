@@ -215,6 +215,29 @@ describe('redis-commands', () => {
         expect(index('zintercard', ['2', 'key1', 'key2'])).to.eql([1, 2])
       })
 
+      it('handles sdiffcard', () => {
+        expect(index('sdiffcard', ['1', 'key1'])).to.eql([1])
+        expect(index('sdiffcard', [2, 'key1', 'key2'])).to.eql([1, 2])
+        expect(
+          index('sdiffcard', ['2', 'key1', 'key2', 'LIMIT', '1'])
+        ).to.eql([1, 2])
+      })
+
+      it('handles sunioncard', () => {
+        expect(index('sunioncard', ['1', 'key1'])).to.eql([1])
+        expect(index('sunioncard', [2, 'key1', 'key2'])).to.eql([1, 2])
+        expect(
+          index('sunioncard', [
+            '2',
+            'key1',
+            'key2',
+            'APPROX',
+            'LIMIT',
+            '1'
+          ])
+        ).to.eql([1, 2])
+      })
+
       it('handles lmpop', () => {
         expect(
           index('lmpop', ['2', 'key1', 'key2', 'left', 'count', 10])
