@@ -1,15 +1,28 @@
 import commands from "./commands.json";
 
+interface CommandMetadata {
+  arity: number;
+  flags: string[];
+  keyStart: number;
+  keyStop: number;
+  step: number;
+  requestPolicy?: string;
+  responsePolicy?: string;
+  subcommands?: Record<string, CommandMetadata>;
+}
+
+const commandMetadata = commands as Record<string, CommandMetadata>;
+
 /**
  * Redis command list
  *
  * All commands are lowercased.
  */
-export const list = Object.keys(commands);
+export const list = Object.keys(commandMetadata);
 
 const flags = {};
 list.forEach((commandName) => {
-  flags[commandName] = commands[commandName].flags.reduce(function (
+  flags[commandName] = commandMetadata[commandName].flags.reduce(function (
     flags,
     flag
   ) {
@@ -30,7 +43,7 @@ export function exists(
     ? String(commandName).toLowerCase()
     : commandName;
 
-  return Boolean(commands[commandName]);
+  return Boolean(commandMetadata[commandName]);
 }
 
 /**
@@ -72,13 +85,23 @@ export function getKeyIndexes(
     ? String(commandName).toLowerCase()
     : commandName;
 
-  const command = commands[commandName];
+  const command = commandMetadata[commandName];
   if (!command) {
     throw new Error("Unknown command " + commandName);
   }
 
   if (!Array.isArray(args)) {
     throw new Error("Expect args to be an array");
+  }
+
+  let resolvedCommand = command;
+  for (let i = 0; i < args.length && resolvedCommand.subcommands; i++) {
+    const subcommand =
+      resolvedCommand.subcommands[String(args[i]).toLowerCase()];
+    if (!subcommand) {
+      break;
+    }
+    resolvedCommand = subcommand;
   }
 
   const keys = [];
@@ -219,13 +242,13 @@ export function getKeyIndexes(
     default:
       // Step has to be at least one in this case, otherwise the command does
       // not contain a key.
-      if (command.step > 0) {
-        const keyStart = command.keyStart - 1;
+      if (resolvedCommand.step > 0) {
+        const keyStart = resolvedCommand.keyStart - 1;
         const keyStop =
-          command.keyStop > 0
-            ? command.keyStop
-            : args.length + command.keyStop + 1;
-        for (let i = keyStart; i < keyStop; i += command.step) {
+          resolvedCommand.keyStop > 0
+            ? resolvedCommand.keyStop
+            : args.length + resolvedCommand.keyStop + 1;
+        for (let i = keyStart; i < keyStop; i += resolvedCommand.step) {
           keys.push(i);
         }
       }
