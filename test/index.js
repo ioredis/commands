@@ -3,6 +3,7 @@
 /* global describe, it */
 
 const commands = require('..')
+const commandMetadata = require('../lib/commands.json')
 const { expect } = require('chai')
 
 describe('redis-commands', () => {
@@ -77,6 +78,20 @@ describe('redis-commands', () => {
     })
   })
 
+  describe('command metadata', () => {
+    it('includes explicit request and response policies', () => {
+      expect(commandMetadata.ping.requestPolicy).to.eql('all_shards')
+      expect(commandMetadata.ping.responsePolicy).to.eql('all_succeeded')
+      expect(commandMetadata.mget.requestPolicy).to.eql('multi_shard')
+    })
+
+    it('includes policies on subcommands', () => {
+      const configSet = commandMetadata.config.subcommands.set
+      expect(configSet.requestPolicy).to.eql('all_nodes')
+      expect(configSet.responsePolicy).to.eql('all_succeeded')
+    })
+  })
+
   describe('.getKeyIndexes()', () => {
     const index = commands.getKeyIndexes
 
@@ -130,6 +145,14 @@ describe('redis-commands', () => {
       expect(index('GET', ['foo'], { nameCaseInsensitive: true })).to.eql([0])
       // also test a command handled in the switch branches
       expect(index('EVAL', ['script', '2', 'k1', 'k2'], { nameCaseInsensitive: true })).to.eql([2, 3])
+    })
+
+    it('uses subcommand key metadata', () => {
+      expect(index('object', ['encoding', 'key'])).to.eql([1])
+      expect(index('object', ['ENCODING', 'key'])).to.eql([1])
+      expect(index('memory', ['usage', 'key'])).to.eql([1])
+      expect(index('xgroup', ['create', 'stream', 'group', '$'])).to.eql([1])
+      expect(index('object', ['help'])).to.eql([])
     })
 
     describe('moveable commands', () => {

@@ -1,148 +1,169 @@
 {
-  "vadd": {
-    "arity": -5,
-    "flags": [
-      "write",
-      "denyoom",
-      "module"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vcard": {
-    "arity": 2,
-    "flags": [
-      "readonly",
-      "module",
-      "fast"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vdim": {
-    "arity": 2,
-    "flags": [
-      "readonly",
-      "module",
-      "fast"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vemb": {
-    "arity": -3,
-    "flags": [
-      "readonly",
-      "module",
-      "fast"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vgetattr": {
-    "arity": 3,
-    "flags": [
-      "readonly",
-      "module",
-      "fast"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vinfo": {
-    "arity": 2,
-    "flags": [
-      "readonly",
-      "module",
-      "fast"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vismember": {
-    "arity": 3,
-    "flags": [
-      "readonly",
-      "module"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vlinks": {
-    "arity": -3,
-    "flags": [
-      "readonly",
-      "module",
-      "fast"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vrandmember": {
-    "arity": -2,
-    "flags": [
-      "readonly",
-      "module"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vrange": {
-    "arity": -4,
-    "flags": [
-      "readonly",
-      "module"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vrem": {
-    "arity": 3,
-    "flags": [
-      "write",
-      "module"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vsetattr": {
-    "arity": 4,
-    "flags": [
-      "write",
-      "module",
-      "fast"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
-  "vsim": {
-    "arity": -4,
-    "flags": [
-      "readonly",
-      "module"
-    ],
-    "keyStart": 1,
-    "keyStop": 1,
-    "step": 1
-  },
   "acl": {
     "arity": -2,
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "cat": {
+        "arity": -2,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "deluser": {
+        "arity": -3,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "dryrun": {
+        "arity": -4,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "genpass": {
+        "arity": -2,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "getuser": {
+        "arity": 3,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "list": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "load": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "log": {
+        "arity": -2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "save": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "setuser": {
+        "arity": -3,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "users": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "whoami": {
+        "arity": 2,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      }
+    }
   },
   "append": {
     "arity": 3,
@@ -155,7 +176,7 @@
     "keyStop": 1,
     "step": 1
   },
-   "arcount": {
+  "arcount": {
     "arity": 2,
     "flags": [
       "readonly",
@@ -354,6 +375,85 @@
     "keyStop": 0,
     "step": 0
   },
+  "backup": {
+    "arity": 2,
+    "flags": [],
+    "keyStart": 0,
+    "keyStop": 0,
+    "step": 0,
+    "subcommands": {
+      "abort": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "cleanup": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "list": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "seal": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "start": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "status": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      }
+    }
+  },
   "bgrewriteaof": {
     "arity": 1,
     "flags": [
@@ -429,7 +529,17 @@
     "flags": [
       "write",
       "denyoom",
-      "noscript",
+      "blocking"
+    ],
+    "keyStart": 1,
+    "keyStop": 2,
+    "step": 1
+  },
+  "blmovem": {
+    "arity": -6,
+    "flags": [
+      "write",
+      "denyoom",
       "blocking"
     ],
     "keyStart": 1,
@@ -451,7 +561,6 @@
     "arity": -3,
     "flags": [
       "write",
-      "noscript",
       "blocking"
     ],
     "keyStart": 1,
@@ -462,7 +571,6 @@
     "arity": -3,
     "flags": [
       "write",
-      "noscript",
       "blocking"
     ],
     "keyStart": 1,
@@ -474,7 +582,6 @@
     "flags": [
       "write",
       "denyoom",
-      "noscript",
       "blocking"
     ],
     "keyStart": 1,
@@ -496,7 +603,6 @@
     "arity": -3,
     "flags": [
       "write",
-      "noscript",
       "blocking",
       "fast"
     ],
@@ -508,7 +614,6 @@
     "arity": -3,
     "flags": [
       "write",
-      "noscript",
       "blocking",
       "fast"
     ],
@@ -521,14 +626,553 @@
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "caching": {
+        "arity": 3,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "getname": {
+        "arity": 2,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "getredir": {
+        "arity": 2,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "id": {
+        "arity": 2,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "info": {
+        "arity": 2,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "kill": {
+        "arity": -3,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "list": {
+        "arity": -2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "no-evict": {
+        "arity": 3,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "no-touch": {
+        "arity": 3,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "pause": {
+        "arity": -3,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "reply": {
+        "arity": 3,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "setinfo": {
+        "arity": 4,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "setname": {
+        "arity": 3,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "tracking": {
+        "arity": -3,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "trackinginfo": {
+        "arity": 2,
+        "flags": [
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "unblock": {
+        "arity": -3,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "unpause": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      }
+    }
   },
   "cluster": {
     "arity": -2,
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "addslots": {
+        "arity": -3,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "addslotsrange": {
+        "arity": -4,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "bumpepoch": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "count-failure-reports": {
+        "arity": 3,
+        "flags": [
+          "admin",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "countkeysinslot": {
+        "arity": 3,
+        "flags": [
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "delslots": {
+        "arity": -3,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "delslotsrange": {
+        "arity": -4,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "failover": {
+        "arity": -2,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "flushslots": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "forget": {
+        "arity": 3,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "getkeysinslot": {
+        "arity": 4,
+        "flags": [
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "info": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "keyslot": {
+        "arity": 3,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "links": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "meet": {
+        "arity": -4,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "migration": {
+        "arity": -4,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "myid": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "myshardid": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "nodes": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "replicas": {
+        "arity": 3,
+        "flags": [
+          "admin",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "replicate": {
+        "arity": 3,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "reset": {
+        "arity": -2,
+        "flags": [
+          "admin",
+          "noscript",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "saveconfig": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "set-config-epoch": {
+        "arity": 3,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "setslot": {
+        "arity": -4,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "shards": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "slaves": {
+        "arity": 3,
+        "flags": [
+          "admin",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "slot-stats": {
+        "arity": -4,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "step": 0
+      },
+      "slots": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "syncslots": {
+        "arity": -3,
+        "flags": [
+          "admin",
+          "stale",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      }
+    }
   },
   "command": {
     "arity": -1,
@@ -538,14 +1182,152 @@
     ],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "count": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "docs": {
+        "arity": -2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "getkeys": {
+        "arity": -3,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "getkeysandflags": {
+        "arity": -3,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "info": {
+        "arity": -2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "list": {
+        "arity": -2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      }
+    }
   },
   "config": {
     "arity": -2,
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "get": {
+        "arity": -3,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "resetstat": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "rewrite": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "set": {
+        "arity": -4,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      }
+    }
   },
   "copy": {
     "arity": -3,
@@ -565,6 +1347,8 @@
     ],
     "keyStart": 0,
     "keyStop": 0,
+    "requestPolicy": "all_shards",
+    "responsePolicy": "agg_sum",
     "step": 0
   },
   "debug": {
@@ -608,6 +1392,28 @@
     ],
     "keyStart": 1,
     "keyStop": -1,
+    "requestPolicy": "multi_shard",
+    "responsePolicy": "agg_sum",
+    "step": 1
+  },
+  "delex": {
+    "arity": -2,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "digest": {
+    "arity": 2,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
     "step": 1
   },
   "discard": {
@@ -635,6 +1441,8 @@
   "echo": {
     "arity": 2,
     "flags": [
+      "loading",
+      "stale",
       "fast"
     ],
     "keyStart": 0,
@@ -648,7 +1456,8 @@
       "stale",
       "skip_monitor",
       "no_mandatory_keys",
-      "movablekeys"
+      "movablekeys",
+      "script_runner"
     ],
     "keyStart": 0,
     "keyStop": 0,
@@ -662,7 +1471,8 @@
       "stale",
       "skip_monitor",
       "no_mandatory_keys",
-      "movablekeys"
+      "movablekeys",
+      "script_runner"
     ],
     "keyStart": 0,
     "keyStop": 0,
@@ -675,7 +1485,8 @@
       "stale",
       "skip_monitor",
       "no_mandatory_keys",
-      "movablekeys"
+      "movablekeys",
+      "script_runner"
     ],
     "keyStart": 0,
     "keyStop": 0,
@@ -689,7 +1500,8 @@
       "stale",
       "skip_monitor",
       "no_mandatory_keys",
-      "movablekeys"
+      "movablekeys",
+      "script_runner"
     ],
     "keyStart": 0,
     "keyStop": 0,
@@ -715,6 +1527,8 @@
     ],
     "keyStart": 1,
     "keyStop": -1,
+    "requestPolicy": "multi_shard",
+    "responsePolicy": "agg_sum",
     "step": 1
   },
   "expire": {
@@ -765,7 +1579,8 @@
       "stale",
       "skip_monitor",
       "no_mandatory_keys",
-      "movablekeys"
+      "movablekeys",
+      "script_runner"
     ],
     "keyStart": 0,
     "keyStop": 0,
@@ -779,7 +1594,8 @@
       "stale",
       "skip_monitor",
       "no_mandatory_keys",
-      "movablekeys"
+      "movablekeys",
+      "script_runner"
     ],
     "keyStart": 0,
     "keyStop": 0,
@@ -792,6 +1608,8 @@
     ],
     "keyStart": 0,
     "keyStop": 0,
+    "requestPolicy": "all_shards",
+    "responsePolicy": "all_succeeded",
     "step": 0
   },
   "flushdb": {
@@ -801,6 +1619,8 @@
     ],
     "keyStart": 0,
     "keyStop": 0,
+    "requestPolicy": "all_shards",
+    "responsePolicy": "all_succeeded",
     "step": 0
   },
   "function": {
@@ -808,7 +1628,111 @@
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "delete": {
+        "arity": 3,
+        "flags": [
+          "write",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "dump": {
+        "arity": 2,
+        "flags": [
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "flush": {
+        "arity": -2,
+        "flags": [
+          "write",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "kill": {
+        "arity": 2,
+        "flags": [
+          "noscript",
+          "allow_busy"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "one_succeeded",
+        "step": 0
+      },
+      "list": {
+        "arity": -2,
+        "flags": [
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "load": {
+        "arity": -3,
+        "flags": [
+          "write",
+          "denyoom",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "restore": {
+        "arity": -3,
+        "flags": [
+          "write",
+          "denyoom",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "stats": {
+        "arity": 2,
+        "flags": [
+          "noscript",
+          "allow_busy"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "special",
+        "step": 0
+      }
+    }
   },
   "geoadd": {
     "arity": -5,
@@ -1069,6 +1993,51 @@
     "keyStop": 1,
     "step": 1
   },
+  "himport": {
+    "arity": -2,
+    "flags": [],
+    "keyStart": 0,
+    "keyStop": 0,
+    "step": 0,
+    "subcommands": {
+      "discard": {
+        "arity": 3,
+        "flags": [],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "step": 0
+      },
+      "discardall": {
+        "arity": 2,
+        "flags": [],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "step": 0
+      },
+      "prepare": {
+        "arity": -4,
+        "flags": [
+          "denyoom"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "step": 0
+      },
+      "set": {
+        "arity": -5,
+        "flags": [
+          "write",
+          "denyoom"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      }
+    }
+  },
   "hincrby": {
     "arity": 4,
     "flags": [
@@ -1130,6 +2099,70 @@
     "keyStart": 1,
     "keyStop": 1,
     "step": 1
+  },
+  "hotkeys": {
+    "arity": -2,
+    "flags": [],
+    "keyStart": 0,
+    "keyStop": 0,
+    "step": 0,
+    "subcommands": {
+      "get": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "special",
+        "responsePolicy": "special",
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "reset": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "special",
+        "step": 0
+      },
+      "start": {
+        "arity": -2,
+        "flags": [
+          "admin",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "special",
+        "step": 0
+      },
+      "stop": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "special",
+        "step": 0
+      }
+    }
   },
   "hpersist": {
     "arity": -5,
@@ -1313,6 +2346,8 @@
     ],
     "keyStart": 0,
     "keyStop": 0,
+    "requestPolicy": "all_shards",
+    "responsePolicy": "special",
     "step": 0
   },
   "keys": {
@@ -1322,6 +2357,7 @@
     ],
     "keyStart": 0,
     "keyStop": 0,
+    "requestPolicy": "all_shards",
     "step": 0
   },
   "lastsave": {
@@ -1340,7 +2376,103 @@
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "doctor": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "special",
+        "step": 0
+      },
+      "graph": {
+        "arity": 3,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "special",
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "histogram": {
+        "arity": -2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "special",
+        "step": 0
+      },
+      "history": {
+        "arity": 3,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "special",
+        "step": 0
+      },
+      "latest": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "special",
+        "step": 0
+      },
+      "reset": {
+        "arity": -2,
+        "flags": [
+          "admin",
+          "noscript",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "agg_sum",
+        "step": 0
+      }
+    }
   },
   "lcs": {
     "arity": -3,
@@ -1382,6 +2514,16 @@
   },
   "lmove": {
     "arity": 5,
+    "flags": [
+      "write",
+      "denyoom"
+    ],
+    "keyStart": 1,
+    "keyStop": 2,
+    "step": 1
+  },
+  "lmovem": {
+    "arity": -5,
     "flags": [
       "write",
       "denyoom"
@@ -1493,7 +2635,64 @@
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "doctor": {
+        "arity": 2,
+        "flags": [],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "special",
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "malloc-stats": {
+        "arity": 2,
+        "flags": [],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "special",
+        "step": 0
+      },
+      "purge": {
+        "arity": 2,
+        "flags": [],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "stats": {
+        "arity": 2,
+        "flags": [],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "special",
+        "step": 0
+      },
+      "usage": {
+        "arity": -3,
+        "flags": [
+          "readonly"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      }
+    }
   },
   "mget": {
     "arity": -2,
@@ -1503,6 +2702,7 @@
     ],
     "keyStart": 1,
     "keyStop": -1,
+    "requestPolicy": "multi_shard",
     "step": 1
   },
   "migrate": {
@@ -1520,7 +2720,62 @@
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "list": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "load": {
+        "arity": -3,
+        "flags": [
+          "admin",
+          "noscript",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "loadex": {
+        "arity": -3,
+        "flags": [
+          "admin",
+          "noscript",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "unload": {
+        "arity": 3,
+        "flags": [
+          "admin",
+          "noscript",
+          "no_async_loading"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      }
+    }
   },
   "monitor": {
     "arity": 1,
@@ -1552,6 +2807,8 @@
     ],
     "keyStart": 1,
     "keyStop": -1,
+    "requestPolicy": "multi_shard",
+    "responsePolicy": "all_succeeded",
     "step": 2
   },
   "msetex": {
@@ -1563,6 +2820,8 @@
     ],
     "keyStart": 0,
     "keyStop": 0,
+    "requestPolicy": "multi_shard",
+    "responsePolicy": "all_succeeded",
     "step": 0
   },
   "msetnx": {
@@ -1593,7 +2852,55 @@
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "encoding": {
+        "arity": 3,
+        "flags": [
+          "readonly"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      },
+      "freq": {
+        "arity": 3,
+        "flags": [
+          "readonly"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "idletime": {
+        "arity": 3,
+        "flags": [
+          "readonly"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      },
+      "refcount": {
+        "arity": 3,
+        "flags": [
+          "readonly"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      }
+    }
   },
   "persist": {
     "arity": 2,
@@ -1692,6 +2999,8 @@
     ],
     "keyStart": 0,
     "keyStop": 0,
+    "requestPolicy": "all_shards",
+    "responsePolicy": "all_succeeded",
     "step": 0
   },
   "psetex": {
@@ -1707,6 +3016,7 @@
   "psubscribe": {
     "arity": -2,
     "flags": [
+      "denyoom",
       "pubsub",
       "noscript",
       "loading",
@@ -1755,7 +3065,74 @@
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "channels": {
+        "arity": -2,
+        "flags": [
+          "pubsub",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "numpat": {
+        "arity": 2,
+        "flags": [
+          "pubsub",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "numsub": {
+        "arity": -2,
+        "flags": [
+          "pubsub",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "shardchannels": {
+        "arity": -2,
+        "flags": [
+          "pubsub",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "shardnumsub": {
+        "arity": -2,
+        "flags": [
+          "pubsub",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      }
+    }
   },
   "punsubscribe": {
     "arity": -1,
@@ -1790,6 +3167,8 @@
     ],
     "keyStart": 0,
     "keyStop": 0,
+    "requestPolicy": "all_shards",
+    "responsePolicy": "special",
     "step": 0
   },
   "readonly": {
@@ -1977,6 +3356,8 @@
     ],
     "keyStart": 0,
     "keyStop": 0,
+    "requestPolicy": "special",
+    "responsePolicy": "special",
     "step": 0
   },
   "scard": {
@@ -1994,7 +3375,74 @@
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "debug": {
+        "arity": 3,
+        "flags": [
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "exists": {
+        "arity": -3,
+        "flags": [
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "agg_logical_and",
+        "step": 0
+      },
+      "flush": {
+        "arity": -2,
+        "flags": [
+          "noscript"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "kill": {
+        "arity": 2,
+        "flags": [
+          "noscript",
+          "allow_busy"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_shards",
+        "responsePolicy": "one_succeeded",
+        "step": 0
+      },
+      "load": {
+        "arity": 3,
+        "flags": [
+          "noscript",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      }
+    }
   },
   "sdiff": {
     "arity": -2,
@@ -2157,7 +3605,57 @@
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "get": {
+        "arity": -2,
+        "flags": [
+          "admin",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "step": 0
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "len": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "agg_sum",
+        "step": 0
+      },
+      "reset": {
+        "arity": 2,
+        "flags": [
+          "admin",
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "requestPolicy": "all_nodes",
+        "responsePolicy": "all_succeeded",
+        "step": 0
+      }
+    }
   },
   "smembers": {
     "arity": 2,
@@ -2262,6 +3760,7 @@
   "ssubscribe": {
     "arity": -2,
     "flags": [
+      "denyoom",
       "pubsub",
       "noscript",
       "loading",
@@ -2284,6 +3783,7 @@
   "subscribe": {
     "arity": -2,
     "flags": [
+      "denyoom",
       "pubsub",
       "noscript",
       "loading",
@@ -2384,7 +3884,18 @@
     ],
     "keyStart": 1,
     "keyStop": -1,
+    "requestPolicy": "multi_shard",
+    "responsePolicy": "agg_sum",
     "step": 1
+  },
+  "trimslots": {
+    "arity": -5,
+    "flags": [
+      "write"
+    ],
+    "keyStart": 0,
+    "keyStop": 0,
+    "step": 0
   },
   "ttl": {
     "arity": 2,
@@ -2414,6 +3925,8 @@
     ],
     "keyStart": 1,
     "keyStop": -1,
+    "requestPolicy": "multi_shard",
+    "responsePolicy": "agg_sum",
     "step": 1
   },
   "unsubscribe": {
@@ -2441,13 +3954,164 @@
     "keyStop": 0,
     "step": 0
   },
+  "vadd": {
+    "arity": -5,
+    "flags": [
+      "write",
+      "denyoom",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vcard": {
+    "arity": 2,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vdim": {
+    "arity": 2,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vemb": {
+    "arity": -3,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vgetattr": {
+    "arity": 3,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vinfo": {
+    "arity": 2,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vismember": {
+    "arity": 3,
+    "flags": [
+      "readonly",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vlinks": {
+    "arity": -3,
+    "flags": [
+      "readonly",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vrandmember": {
+    "arity": -2,
+    "flags": [
+      "readonly",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vrange": {
+    "arity": -4,
+    "flags": [
+      "readonly",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vrem": {
+    "arity": 3,
+    "flags": [
+      "write",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vsetattr": {
+    "arity": 4,
+    "flags": [
+      "write",
+      "module",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "vsim": {
+    "arity": -4,
+    "flags": [
+      "readonly",
+      "module"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "wait": {
     "arity": 3,
     "flags": [
-      "noscript"
+      "blocking"
     ],
     "keyStart": 0,
     "keyStop": 0,
+    "requestPolicy": "all_shards",
+    "responsePolicy": "agg_min",
+    "step": 0
+  },
+  "waitaof": {
+    "arity": 4,
+    "flags": [
+      "blocking"
+    ],
+    "keyStart": 0,
+    "keyStop": 0,
+    "requestPolicy": "all_shards",
+    "responsePolicy": "agg_min",
     "step": 0
   },
   "watch": {
@@ -2473,6 +4137,16 @@
     "keyStop": 1,
     "step": 1
   },
+  "xackdel": {
+    "arity": -6,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "xadd": {
     "arity": -5,
     "flags": [
@@ -2486,6 +4160,16 @@
   },
   "xautoclaim": {
     "arity": -6,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "xcfgset": {
+    "arity": -2,
     "flags": [
       "write",
       "fast"
@@ -2529,14 +4213,123 @@
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "create": {
+        "arity": -5,
+        "flags": [
+          "write",
+          "denyoom"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      },
+      "createconsumer": {
+        "arity": 5,
+        "flags": [
+          "write",
+          "denyoom"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      },
+      "delconsumer": {
+        "arity": 5,
+        "flags": [
+          "write"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      },
+      "destroy": {
+        "arity": 4,
+        "flags": [
+          "write"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "setid": {
+        "arity": -5,
+        "flags": [
+          "write"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      }
+    }
+  },
+  "xidmprecord": {
+    "arity": 5,
+    "flags": [
+      "write",
+      "denyoom",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
   },
   "xinfo": {
     "arity": -2,
     "flags": [],
     "keyStart": 0,
     "keyStop": 0,
-    "step": 0
+    "step": 0,
+    "subcommands": {
+      "consumers": {
+        "arity": 4,
+        "flags": [
+          "readonly"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      },
+      "groups": {
+        "arity": 3,
+        "flags": [
+          "readonly"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      },
+      "help": {
+        "arity": 2,
+        "flags": [
+          "loading",
+          "stale"
+        ],
+        "keyStart": 0,
+        "keyStop": 0,
+        "step": 0
+      },
+      "stream": {
+        "arity": -3,
+        "flags": [
+          "readonly"
+        ],
+        "keyStart": 2,
+        "keyStop": 2,
+        "step": 1
+      }
+    }
   },
   "xlen": {
     "arity": 2,
@@ -2818,7 +4611,7 @@
     "step": 1
   },
   "zrank": {
-    "arity": 3,
+    "arity": -3,
     "flags": [
       "readonly",
       "fast"
@@ -2892,7 +4685,7 @@
     "step": 1
   },
   "zrevrank": {
-    "arity": 3,
+    "arity": -3,
     "flags": [
       "readonly",
       "fast"
