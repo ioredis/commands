@@ -1,3 +1,13 @@
+# [2.0.0](https://github.com/ioredis/commands/compare/v1.11.0...v2.0.0) (2026-07-28)
+
+
+* feat!: add Redis subcommand and routing metadata (#18) ([ebca244](https://github.com/ioredis/commands/commit/ebca24426e94e686d10886e43b7bb255df6dd534)), closes [#18](https://github.com/ioredis/commands/issues/18)
+
+
+### BREAKING CHANGES
+
+* refresh command flags, arities, and list ordering from current Redis metadata.
+
 # [1.11.0](https://github.com/ioredis/commands/compare/v1.10.0...v1.11.0) (2026-07-15)
 
 
