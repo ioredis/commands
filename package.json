@@ -40,7 +40,7 @@
     "@types/node": "^20.11.16",
     "chai": "^4.3.6",
     "ioredis": "5.11.1",
-    "mocha": "^9.2.1",
+    "mocha": "11.7.6",
     "safe-stable-stringify": "^2.3.1",
     "semantic-release": "25.0.5",
     "snazzy": "^9.0.0",
