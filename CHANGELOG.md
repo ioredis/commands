@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/ioredis/commands/compare/v2.0.0...v2.1.0) (2026-10-02)
+
+
+### Features
+
+* add bless commands family ([24fa77f](https://github.com/ioredis/commands/commit/24fa77f6058822cd9a765c37e54919c12dfd6352))
+
 # [2.0.0](https://github.com/ioredis/commands/compare/v1.11.0...v2.0.0) (2026-07-28)
 
 
