@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/ioredis/commands/compare/v2.1.0...v2.1.1) (2026-10-02)
+
+
+### Bug Fixes
+
+* normalize repository url in package.json ([#22](https://github.com/ioredis/commands/issues/22)) ([6755a24](https://github.com/ioredis/commands/commit/6755a24c162924ea6cab52672142a61e42441a5b))
+
 # [2.1.0](https://github.com/ioredis/commands/compare/v2.0.0...v2.1.0) (2026-10-02)
 
 
