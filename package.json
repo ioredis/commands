@@ -12,8 +12,7 @@
     "test": "mocha",
     "build": "rm -rf built && tsc",
     "gen": "node tools/build",
-    "lint": "standard --fix --verbose | snazzy",
-    "release": "release-it"
+    "lint": "standard --fix --verbose | snazzy"
   },
   "publishConfig": {
     "access": "public",
@@ -35,16 +34,14 @@
   },
   "homepage": "https://github.com/ioredis/commands",
   "devDependencies": {
-    "@release-it/conventional-changelog": "^4.2.0",
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/commit-analyzer": "13.0.1",
+    "@semantic-release/git": "10.0.1",
     "chai": "^4.3.6",
-    "ioredis": "^5.0.6",
+    "ioredis": "5.11.1",
     "mocha": "^9.2.1",
-    "release-it": "^14.12.5",
     "safe-stable-stringify": "^2.3.1",
-    "semantic-release": "^19.0.2",
+    "semantic-release": "25.0.5",
     "snazzy": "^9.0.0",
     "standard": "^16.0.4",
     "typescript": "^4.6.2"
