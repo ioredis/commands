@@ -3385,6 +3385,17 @@
     "keyStop": 1,
     "step": 1
   },
+  "saddex": {
+    "arity": -5,
+    "flags": [
+      "write",
+      "denyoom",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "save": {
     "arity": 1,
     "flags": [
@@ -3583,6 +3594,36 @@
     "keyStop": 1,
     "step": 1
   },
+  "sexpire": {
+    "arity": -6,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "sexpireat": {
+    "arity": -6,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "sexpiretime": {
+    "arity": -5,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "shutdown": {
     "arity": -1,
     "flags": [
@@ -3755,10 +3796,60 @@
     "keyStop": 1,
     "step": 1
   },
+  "spersist": {
+    "arity": -5,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "spexpire": {
+    "arity": -6,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "spexpireat": {
+    "arity": -6,
+    "flags": [
+      "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "spexpiretime": {
+    "arity": -5,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "spop": {
     "arity": -2,
     "flags": [
       "write",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "spttl": {
+    "arity": -5,
+    "flags": [
+      "readonly",
       "fast"
     ],
     "keyStart": 1,
@@ -3820,6 +3911,16 @@
   },
   "strlen": {
     "arity": 2,
+    "flags": [
+      "readonly",
+      "fast"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
+  "sttl": {
+    "arity": -5,
     "flags": [
       "readonly",
       "fast"
