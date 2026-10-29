@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/ioredis/commands/compare/v2.1.1...v2.2.0) (2026-10-29)
+
+
+### Features
+
+* add set member expiration commands ([#23](https://github.com/ioredis/commands/issues/23)) ([8a48986](https://github.com/ioredis/commands/commit/8a48986f0c9e27f959503b6c7855a0ade2830bff))
+
 ## [2.1.1](https://github.com/ioredis/commands/compare/v2.1.0...v2.1.1) (2026-10-02)
 
 
