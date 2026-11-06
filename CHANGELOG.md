@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/ioredis/commands/compare/v2.2.0...v2.3.0) (2026-11-06)
+
+
+### Features
+
+* add BITRANGEINTARRAY command ([#24](https://github.com/ioredis/commands/issues/24)) ([0430f55](https://github.com/ioredis/commands/commit/0430f55458e80da43900a0e26f1238716f524037))
+
 # [2.2.0](https://github.com/ioredis/commands/compare/v2.1.1...v2.2.0) (2026-10-29)
 
 
