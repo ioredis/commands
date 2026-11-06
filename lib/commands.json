@@ -524,6 +524,15 @@
     "keyStop": 1,
     "step": 1
   },
+  "bitrangeintarray": {
+    "arity": -4,
+    "flags": [
+      "readonly"
+    ],
+    "keyStart": 1,
+    "keyStop": 1,
+    "step": 1
+  },
   "bless": {
     "arity": -2,
     "flags": [],
