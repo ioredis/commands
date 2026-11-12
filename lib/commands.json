@@ -645,6 +645,17 @@
     "keyStop": 2,
     "step": 1
   },
+  "bzmove": {
+    "arity": -5,
+    "flags": [
+      "write",
+      "denyoom",
+      "blocking"
+    ],
+    "keyStart": 1,
+    "keyStop": 2,
+    "step": 1
+  },
   "bzmpop": {
     "arity": -5,
     "flags": [
@@ -4680,6 +4691,26 @@
     ],
     "keyStart": 1,
     "keyStop": 1,
+    "step": 1
+  },
+  "zmove": {
+    "arity": -4,
+    "flags": [
+      "write",
+      "denyoom"
+    ],
+    "keyStart": 1,
+    "keyStop": 2,
+    "step": 1
+  },
+  "zmovemember": {
+    "arity": -6,
+    "flags": [
+      "write",
+      "denyoom"
+    ],
+    "keyStart": 1,
+    "keyStop": 2,
     "step": 1
   },
   "zmpop": {
