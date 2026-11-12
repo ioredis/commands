@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/ioredis/commands/compare/v2.3.0...v2.4.0) (2026-11-12)
+
+
+### Features
+
+* add sorted-set move commands ([#25](https://github.com/ioredis/commands/issues/25)) ([ec40210](https://github.com/ioredis/commands/commit/ec4021074d50596d3d27d660cb3344442d886eb5))
+
 # [2.3.0](https://github.com/ioredis/commands/compare/v2.2.0...v2.3.0) (2026-11-06)
 
 
